@@ -1,0 +1,24 @@
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.info {
+  font-family: sans-serif;
+  padding: 80px 80px;
+  background-color: #2e1e4d;
+}
+
+.info h1 {
+  font-size: 40px;
+}
+
+.info p {
+  color: #a1adcf;
+  font-size: 22px;
+  line-height: 30px;
+  padding: 40px 60px;
+}
