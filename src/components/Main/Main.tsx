@@ -2,7 +2,7 @@ import styles from './Main.module.css'
 
 function Main() {
     return (
-        <main className={styles.flexbox}>
+        <main id='home' className={styles.flexbox}>
             
             <div className={styles.circleOne}/>
             <div className={styles.circleTwo}/>

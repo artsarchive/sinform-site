@@ -18,10 +18,15 @@ nav {
     gap: 30px;
 }
 
-.navegate {
-    font-size: 18px;
-    font-weight: 400; 
+.navegate a{
+    text-decoration: none;
     color: #6b7ab5;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.navegate a:hover{
+    color: #4f5c91;
 }
 
 .logo {
