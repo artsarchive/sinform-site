@@ -185,11 +185,6 @@ export function Hero({ isDarkMode, scrollToSection }: HeroProps) {
           SINFORM
         </h1>
 
-        {/* SEMANA DE INFORMATICA */}
-        <p className={`text-lg sm:text-xl tracking-[0.3em] uppercase mb-4 ${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#2E1E4D]'}`} style={{ letterSpacing: '0.3em' }}>
-          SEMANA DE INFORMÁTICA
-        </p>
-
         {/* Date and Location */}
         <p className={`text-sm sm:text-base mb-12 ${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#2E1E4D]'}`}>
           26 — 29 de maio · UESC, Ilhéus — BA
