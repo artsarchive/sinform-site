@@ -43,10 +43,10 @@ export function Footer({ isDarkMode, scrollToSection }: FooterProps) {
               Contato
             </h4>
             <p className={`${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#5B439A]'}`}>
-              sinform@uesc.br
+              cacic@uesc.br
             </p>
             <p className={`${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#5B439A]'}`}>
-              (73) 3680-5000
+              @cacicuesc
             </p>
           </div>
         </div>

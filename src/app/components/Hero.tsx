@@ -176,7 +176,7 @@ export function Hero({ isDarkMode, scrollToSection }: HeroProps) {
         {/* SEMANA DE TECNOLOGIA */}
         <div className={`inline-block px-6 py-2 rounded-full mb-8 border ${isDarkMode ? 'border-[#5B439A] bg-[#5B439A]/20' : 'border-[#2E1E4D] bg-white/50'}`}>
           <p className={`text-xs font-bold tracking-[0.3em] uppercase ${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#2E1E4D]'}`}>
-            SEMANA DE TECNOLOGIA
+            SEMANA DE INFORMÁTICA
           </p>
         </div>
 
@@ -187,7 +187,7 @@ export function Hero({ isDarkMode, scrollToSection }: HeroProps) {
 
         {/* Date and Location */}
         <p className={`text-sm sm:text-base mb-12 ${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#2E1E4D]'}`}>
-          26 — 29 de maio · UESC, Ilhéus — BA
+          09 — 12 de junho · UESC, Ilhéus — BA
         </p>
 
         {/* Saiba mais Button */}

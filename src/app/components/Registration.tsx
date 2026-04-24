@@ -15,7 +15,8 @@ export function Registration({ isDarkMode }: RegistrationProps) {
         <button
           className={`px-12 py-5 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 ${isDarkMode ? 'bg-[#5B439A] text-[#F1E7B5] hover:bg-[#B2CCF1] hover:text-[#2E1E4D]' : 'bg-[#5B439A] text-[#F1E7B5] hover:bg-[#2E1E4D]'} shadow-2xl`}
         >
-          Inscreva-se na Programação
+          <a href="https://www.even3.com.br/24-semana-de-informatica-uesc-sinform-712603/">Inscreva-se na Programação</a>
+          
         </button>
       </div>
     </section>
