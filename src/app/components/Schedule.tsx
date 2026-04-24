@@ -35,14 +35,14 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '10:45',
           endTime: '12:00',
           events: [
-            { title: 'Palestra 2', speaker: 'Prof. Jorginho', room: 'Sala 8B' },
+            { title: 'Palestra 2', speaker: 'Prof. x', room: 'Sala 8B' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '17:00',
           events: [
-            { title: 'Mesa Redonda', speaker: 'Prof. Jorginho', room: 'Sala 8B' },
+            { title: 'Mesa Redonda', speaker: 'Prof. x', room: 'Sala 8B' },
           ],
         },
       ],
