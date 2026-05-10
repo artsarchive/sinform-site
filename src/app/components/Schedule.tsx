@@ -93,7 +93,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             { title: 'Dados: Minicurso 4', speaker: 'Prof. x', room: 'Sala y' },
             { title: 'Web: Minicurso 4', speaker: 'Prof. x', room: 'Sala y' },
             { title: 'Backend: Minicurso 4', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Realidade Aumentada', speaker: 'Claudio Goes', room: 'Sala y' },
+            { title: 'Realidade Aumentada', speaker: 'Prof. Dr. Claudio Eduardo Goes', room: 'Sala y' },
             { title: 'Canva e Pacote Office', speaker: 'Maria Eduarda e Rebeca', room: 'Sala y' },
           ],
         },
@@ -106,7 +106,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { title: 'LinkedIn', speaker: 'Joabe Andrade', room: 'Sala y' },
+            { title: 'Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo', speaker: 'Joabe Andrade', room: 'Sala y' },
             { title: 'Aquecimento para CPU', speaker: 'Prof. x', room: 'Sala y' },
           ],
         },
