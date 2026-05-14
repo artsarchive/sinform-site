@@ -1,18 +1,40 @@
-interface Event {
+import { useState } from "react";
+
+type Trilha = 'CIÊNCIA DE DADOS' | 'WEB + UI/UX' | 'BACKEND';
+
+interface EventoBase {
   title: string;
-  speaker: string;
   room: string;
 }
 
-interface TimeSlot {
+interface MinicursoSimples extends EventoBase {
+  tipo: 'minicurso-simples';
+  speaker: string;
+}
+
+interface MinicursoTrilha extends EventoBase {
+  tipo: 'minicurso-trilha';
+  trilha: Trilha;
+  speaker: string;
+}
+
+interface Palestra extends EventoBase {
+  tipo: 'palestra';
+  speaker: string;
+  speakerDescription: string;
+}
+
+type EventoCronograma = MinicursoSimples | MinicursoTrilha | Palestra;
+
+interface TimeSlotEvent {
   startTime: string;
   endTime: string;
-  events: Event[];
+  events: EventoCronograma[];
 }
 
 interface DaySchedule {
   day: string;
-  timeSlots: TimeSlot[];
+  timeSlots: TimeSlotEvent[];
 }
 
 interface ScheduleProps {
@@ -28,21 +50,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '09:00',
           endTime: '10:15',
           events: [
-            { title: 'Abertura SINFORM', speaker: 'Equipe Organizadora', room: 'Biblioteca' },
+            { tipo: 'palestra', title: 'Abertura SINFORM', speaker: 'Sílvio Commim', speakerDescription: 'DATEN', room: 'Biblioteca' },
           ],
         },
         {
           startTime: '10:45',
           endTime: '12:00',
           events: [
-            { title: 'Palestra 2', speaker: 'Prof. x', room: 'Sala 8B' },
+            { tipo: 'palestra', title: 'Palestra 2', speaker: 'Leonardo Zanotto', speakerDescription: 'Líder do time de governança de dados da iFood', room: 'Sala 8B' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '17:00',
           events: [
-            { title: 'Mesa Redonda', speaker: 'Prof. x', room: 'Sala 8B' },
+            { tipo: 'minicurso-simples', title: 'Mesa Redonda', speaker: 'O universo da tecnologia na era da IA', room: 'Sala 8B' },
           ],
         },
       ],
@@ -54,20 +76,22 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { title: 'Dados: Minicurso 1', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Web: Minicurso 1', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Backend: Minicurso 1', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Minicurso QA', speaker: 'Thainá e Guilherme B', room: 'Sala y' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Ciência de Dados e Machine Learning com Python', speaker: 'Ítalo Seara', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'UX Design aplicado: princípios essenciais para sistemas web e mobile', speaker: 'Isabelle Cruz', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'API REST na prática com Python: construindo e consumindo com Flask', speaker: 'Izabelle Garcez', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo', speaker: 'Joabe Andrade', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Conceitos básicos de programação e resolução de problemas usando C e Python', speaker: 'Humberto', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Pacotes Online e Canva', speaker: 'Maria Eduarda e Rebeca', room: 'Sala X' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '17:00',
           events: [
-            { title: 'Dados: Minicurso 2', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Web: Minicurso 2', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Backend: Minicurso 2', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Introdução a Linux', speaker: 'Arthur de Carvalho', room: 'Sala y' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Introdução a Ciência de Dados com Python', speaker: 'Solana Marina', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Segurança Web: Fundamentos, Vulnerabilidades e Exploração', speaker: 'Henrique Souza', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: '?', speaker: '?', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Introdução a Git e GitHub', speaker: 'João Pedro França', room: 'Sala X' },
           ],
         },
       ],
@@ -79,22 +103,22 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { title: 'Dados: Minicurso 3', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Web: Minicurso 3', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Backend: Minicurso 3', speaker: 'André Cardoso', room: 'Sala y' },
-            { title: 'Introdução a Git e GitHub', speaker: 'João Pedro França', room: 'Sala y' },
-            { title: 'Introdução a Programação', speaker: 'Humberto', room: 'Sala y' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do dado bruto ao insight: Python + Power BI na prática', speaker: 'Brenda Castro', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Frontend do zero: criando sua primeira página web na prática', speaker: 'Davi Roriz', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Laravel na prática: criando e testando sua primeira API', speaker: 'André Cardoso', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Primeiros passos no teste de softwares', speaker: 'Thainá e Guilherme B.', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Introdução ao Tráfego Pago com Meta ADS: Como anunciar no Facebook e Instagram', speaker: 'Ryan', room: 'Sala X' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '17:00',
           events: [
-            { title: 'Dados: Minicurso 4', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Web: Minicurso 4', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Backend: Minicurso 4', speaker: 'Prof. x', room: 'Sala y' },
-            { title: 'Realidade Aumentada', speaker: 'Prof. Dr. Claudio Eduardo Goes', room: 'Sala y' },
-            { title: 'Canva e Pacote Office', speaker: 'Maria Eduarda e Rebeca', room: 'Sala y' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do Pixel ao Prompt: Imersão em IA e Prática em Visão Computacional', speaker: 'Henrique Daniel', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'FullStack com React, Node.js e TypeScript', speaker: 'Renardo Alves', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Introdução à Programação Backend: Construindo APIs REST em .NET (Minimal API)', speaker: 'Vitor Pires', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Deep Learning para Detecção de Objetos em Vídeos utilizando YOLO', speaker: 'Claudio Goes', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Edição e Restauração de Fotos com Photopea: da Introdução ao Uso Autônomo', speaker: 'Erick Silva', room: 'Sala X' },
           ],
         },
       ],
@@ -106,15 +130,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { title: 'Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo', speaker: 'Joabe Andrade', room: 'Sala y' },
-            { title: 'Aquecimento para CPU', speaker: 'Prof. x', room: 'Sala y' },
+            { tipo: 'minicurso-simples', title: 'Dominando o Terminal Linux: do Zero à Automação', speaker: 'Arthur de Carvalho', room: 'Sala X' },
+          ],
+        },
+        {
+          startTime: '09:00',
+          endTime: '11:00',
+          events: [
+            { tipo: 'minicurso-simples', title: 'Aquecimento para CPU', speaker: 'Hamilton', room: 'Sala X' },
           ],
         },
         {
           startTime: '14:00',
-          endTime: '17:00',
+          endTime: '18:00',
           events: [
-            { title: 'Aquecimento para CPU', speaker: 'Hamilton', room: 'Sala y' },
+            { tipo: 'minicurso-simples', title: 'Início da CPU', speaker: 'Hamilton', room: 'Sala X' },
           ],
         },
       ],
@@ -123,6 +153,30 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
 
   const dk = isDarkMode;
 
+  const trilhaCores: Record<Trilha, string> = {
+    'CIÊNCIA DE DADOS': dk ? 'bg-sky-900/60 text-sky-200' : 'bg-sky-100 text-sky-700',
+    'WEB + UI/UX': dk ? 'bg-violet-900/60 text-violet-200' : 'bg-violet-100 text-violet-700',
+    'BACKEND': dk ? 'bg-emerald-900/60 text-emerald-200' : 'bg-emerald-100 text-emerald-700',
+  };
+
+  const [filtroDia, setFiltroDia] = useState<string | null>(null);
+  const [filtroTipo, setFiltroTipo] = useState<string | null>(null);
+  const [filtroTrilha, setFiltroTrilha] = useState<Trilha | null>(null);
+
+  const dadosFiltrados = scheduleData
+    .filter(day => !filtroDia || day.day === filtroDia)
+    .map(day => ({
+      ...day,
+      timeSlots: day.timeSlots.map(slot => ({
+        ...slot,
+        events: slot.events.filter(event => {
+          if (filtroTipo && event.tipo !== filtroTipo) return false;
+          if (filtroTrilha && (event.tipo !== 'minicurso-trilha' || event.trilha !== filtroTrilha)) return false;
+          return true;
+        }),
+      })),
+    }));
+
   return (
     <section id="programacao" className="py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-7xl">
@@ -130,8 +184,64 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           Programação Detalhada
         </h2>
 
+        {/* filtros */}
+        <div className="flex flex-wrap gap-6 justify-center mb-8">
+
+          {/* por dia */}
+          <div className="flex gap-2 flex-wrap justify-center">
+            {['Dia 9', 'Dia 10', 'Dia 11', 'Dia 12'].map(dia => (
+              <button
+                key={dia}
+                onClick={() => setFiltroDia(filtroDia === dia ? null : dia)}
+                className={`text-xs px-3 py-1 rounded-full border transition-colors ${
+                  filtroDia === dia
+                    ? dk ? 'bg-[#F1E7B5] text-[#2E1E4D]' : 'bg-[#2E1E4D] text-white'
+                    : dk ? 'border-[#5B439A]/40 text-[#F1E7B5]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
+                }`}
+              >
+                {dia}
+              </button>
+            ))}
+          </div>
+
+          {/* por tipo */}
+          <div className="flex gap-2 flex-wrap justify-center">
+            {(['palestra', 'minicurso-trilha', 'minicurso-simples'] as const).map(tipo => (
+              <button
+                key={tipo}
+                onClick={() => setFiltroTipo(filtroTipo === tipo ? null : tipo)}
+                className={`text-xs px-3 py-1 rounded-full border transition-colors ${
+                  filtroTipo === tipo
+                    ? dk ? 'bg-[#F1E7B5] text-[#2E1E4D]' : 'bg-[#2E1E4D] text-white'
+                    : dk ? 'border-[#5B439A]/40 text-[#F1E7B5]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
+                }`}
+              >
+                {tipo === 'palestra' ? 'Palestras' : tipo === 'minicurso-trilha' ? 'Trilhas' : 'Minicursos'}
+              </button>
+            ))}
+          </div>
+
+          {/* por trilha */}
+          <div className="flex gap-2 flex-wrap justify-center">
+            {(['CIÊNCIA DE DADOS', 'WEB + UI/UX', 'BACKEND'] as Trilha[]).map(trilha => (
+              <button
+                key={trilha}
+                onClick={() => setFiltroTrilha(filtroTrilha === trilha ? null : trilha)}
+                className={`text-xs font-mono px-3 py-1 rounded-full border transition-colors ${
+                  filtroTrilha === trilha
+                    ? trilhaCores[trilha]
+                    : dk ? 'border-[#5B439A]/40 text-[#F1E7B5]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
+                }`}
+              >
+                {trilha}
+              </button>
+            ))}
+          </div>
+
+        </div>
+
         <div className="flex flex-col gap-4">
-          {scheduleData.map((day, dayIndex) => (
+          {dadosFiltrados.map((day, dayIndex) => (
             <div
               key={dayIndex}
               className={`rounded-xl overflow-hidden border ${dk ? 'border-[#5B439A]/30' : 'border-[#A1ADCF]/60'}`}
@@ -144,50 +254,77 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               </div>
 
               {/* faixas de horario */}
-              {day.timeSlots.map((slot, slotIndex) => (
-                <div
-                  key={slotIndex}
-                  className={`flex items-stretch border-t ${dk ? 'border-[#5B439A]/20' : 'border-[#A1ADCF]/40'}`}
-                >
-                  {/* coluna horario */}
-                  <div className={`flex flex-col items-center justify-center px-4 py-4 min-w-[72px] border-r ${
-                    dk
-                      ? 'border-[#5B439A]/20 bg-[#2E1E4D]/30'
-                      : 'border-[#A1ADCF]/40 bg-[#F7F5FF]'
-                  }`}>
-                    <span className={`text-xs font-semibold tabular-nums ${dk ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
-                      {slot.startTime}
-                    </span>
-                    <span className={`text-[10px] mt-0.5 tabular-nums ${dk ? 'text-[#A1ADCF]/50' : 'text-[#5B439A]/50'}`}>
-                      {slot.endTime}
-                    </span>
-                  </div>
-
-                  {/* eventos */}
-                  <div className="flex flex-wrap flex-1">
-                    {slot.events.map((event, idx) => (
-                      <div
-                        key={idx}
-                        className={`flex flex-col justify-center px-4 py-4 flex-1 min-w-[160px] border-r last:border-r-0 ${
-                          dk ? 'border-[#5B439A]/20' : 'border-[#A1ADCF]/40'
-                        }`}
-                      >
-                        <p className={`text-sm font-semibold leading-snug ${dk ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
-                          {event.title}
-                        </p>
-                        <p className={`text-xs mt-1 ${dk ? 'text-[#A1ADCF]/80' : 'text-[#5B439A]/80'}`}>
-                          {event.speaker}
-                        </p>
-                        {event.room !== 'Sala y' && (
-                          <p className={`text-[10px] mt-1 ${dk ? 'text-[#A1ADCF]/40' : 'text-[#5B439A]/40'}`}>
-                            {event.room}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+              {day.timeSlots.every(slot => slot.events.length === 0) ? (
+                <div className={`flex items-center justify-center px-4 py-8 border-t ${
+                  dk ? 'border-[#5B439A]/20' : 'border-[#A1ADCF]/40'
+                }`}>
+                  <span className={`text-xs italic ${dk ? 'text-[#A1ADCF]/40' : 'text-[#5B439A]/40'}`}>
+                    Hmm... nada por aqui
+                  </span>
                 </div>
-              ))}
+              ) : (
+                day.timeSlots
+                  .filter(slot => slot.events.length > 0)
+                  .map((slot, slotIndex) => (
+                    <div
+                      key={slotIndex}
+                      className={`flex items-stretch border-t ${dk ? 'border-[#5B439A]/20' : 'border-[#A1ADCF]/40'}`}
+                    >
+                      {/* coluna horario */}
+                      <div className={`flex flex-col items-center justify-center px-4 py-4 min-w-[72px] border-r ${
+                        dk
+                          ? 'border-[#5B439A]/20 bg-[#2E1E4D]/30'
+                          : 'border-[#A1ADCF]/40 bg-[#F7F5FF]'
+                      }`}>
+                        <span className={`text-xs font-semibold tabular-nums ${dk ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
+                          {slot.startTime}
+                        </span>
+                        <span className={`text-[10px] mt-0.5 tabular-nums ${dk ? 'text-[#A1ADCF]/50' : 'text-[#5B439A]/50'}`}>
+                          {slot.endTime}
+                        </span>
+                      </div>
+
+                      {/* eventos */}
+                      <div className="flex flex-wrap flex-1">
+                        {slot.events.map((event, idx) => (
+                          <div
+                            key={idx}
+                            className={`flex flex-col justify-center px-4 py-4 flex-1 min-w-[180px] min-h-[120px] border-r last:border-r-0 ${
+                              dk ? 'border-[#5B439A]/20' : 'border-[#A1ADCF]/40'
+                            }`}
+                          >
+                            <div className="flex flex-col justify-center py-2">
+                              {event.tipo === 'minicurso-trilha' && (
+                                <span className={`text-xs font-mono tracking-wide px-3 py-1 rounded-full w-fit ${trilhaCores[event.trilha]}`}>
+                                  {event.trilha}
+                                </span>
+                              )}
+                            </div>
+
+                            <p className={`text-sm font-semibold leading-snug ${dk ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
+                              {event.title}
+                            </p>
+                            <p className={`text-xs mt-1 ${dk ? 'text-[#A1ADCF]/80' : 'text-[#5B439A]/80'}`}>
+                              {event.speaker}
+                            </p>
+
+                            {event.tipo === 'palestra' && (
+                              <p className={`text-xs mt-1 italic ${dk ? 'text-[#F1E7B5]/70' : 'text-[#5B439A]/75'}`}>
+                                {event.speakerDescription}
+                              </p>
+                            )}
+
+                            {event.room !== 'Sala y' && (
+                              <p className={`text-[10px] mt-1 ${dk ? 'text-[#A1ADCF]/40' : 'text-[#5B439A]/40'}`}>
+                                {event.room}
+                              </p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+              )}
             </div>
           ))}
         </div>
