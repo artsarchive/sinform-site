@@ -18,7 +18,7 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? 'bg-[#2E1E4D]' : 'bg-[#F1E7B5]'}`}>
+    <div className={`min-h-screen transition-colors duration-500 ${isDarkMode ? 'bg-[#2E1E4D]' : 'bg-[#FFFFFF]'}`}>
       <Header
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}

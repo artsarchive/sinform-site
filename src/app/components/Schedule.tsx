@@ -247,8 +247,8 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               className={`rounded-xl overflow-hidden border ${dk ? 'border-[#5B439A]/30' : 'border-[#A1ADCF]/60'}`}
             >
               {/* cabecalho do dia */}
-              <div className={`px-5 py-3 ${dk ? 'bg-[#5B439A]/25' : 'bg-[#2E1E4D]/6'}`}>
-                <span className={`text-sm font-semibold tracking-widest uppercase ${dk ? 'text-[#F1E7B5]/70' : 'text-[#5B439A]'}`}>
+              <div className={`px-5 py-3 ${dk ? 'bg-[#5B439A]/25' : 'bg-[#5b439a]/15'}`}>
+                <span className={`text-[18px] font-semibold tracking-widest uppercase ${dk ? 'text-[#F1E7B5]/70' : 'text-[#5B439A]'}`}>
                   {day.day}
                 </span>
               </div>
@@ -274,7 +274,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
                       <div className={`flex flex-col items-center justify-center px-4 py-4 min-w-[72px] border-r ${
                         dk
                           ? 'border-[#5B439A]/20 bg-[#2E1E4D]/30'
-                          : 'border-[#A1ADCF]/40 bg-[#F7F5FF]'
+                          : 'border-[#A1ADCF]/40 bg-[#5b439a]/5'
                       }`}>
                         <span className={`text-xs font-semibold tabular-nums ${dk ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
                           {slot.startTime}
@@ -295,27 +295,27 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
                           >
                             <div className="flex flex-col justify-center py-2">
                               {event.tipo === 'minicurso-trilha' && (
-                                <span className={`text-xs font-mono tracking-wide px-3 py-1 rounded-full w-fit ${trilhaCores[event.trilha]}`}>
+                                <span className={`text-xs font-bold tracking-wide px-3 py-1 rounded-full w-fit ${trilhaCores[event.trilha]}`}>
                                   {event.trilha}
                                 </span>
                               )}
                             </div>
 
-                            <p className={`text-sm font-semibold leading-snug ${dk ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
+                            <p className={`text-[16x] font-semibold leading-snug ${dk ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
                               {event.title}
                             </p>
-                            <p className={`text-xs mt-1 ${dk ? 'text-[#A1ADCF]/80' : 'text-[#5B439A]/80'}`}>
+                            <p className={`text-[14px] mt-1 ${dk ? 'text-[#A1ADCF]/80' : 'text-[#5B439A]/80'}`}>
                               {event.speaker}
                             </p>
 
                             {event.tipo === 'palestra' && (
-                              <p className={`text-xs mt-1 italic ${dk ? 'text-[#F1E7B5]/70' : 'text-[#5B439A]/75'}`}>
+                              <p className={`text-[14px] mt-1 italic ${dk ? 'text-[#F1E7B5]/70' : 'text-[#5B439A]/75'}`}>
                                 {event.speakerDescription}
                               </p>
                             )}
 
                             {event.room !== 'Sala y' && (
-                              <p className={`text-[10px] mt-1 ${dk ? 'text-[#A1ADCF]/40' : 'text-[#5B439A]/40'}`}>
+                              <p className={`text-[13px] mt-1 ${dk ? 'text-[#A1ADCF]/80' : 'text-[#5B439A]/80'}`}>
                                 {event.room}
                               </p>
                             )}

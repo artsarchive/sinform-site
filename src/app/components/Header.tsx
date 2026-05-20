@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export function Header({ isDarkMode, setIsDarkMode, scrollToSection }: HeaderProps) {
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isDarkMode ? 'bg-[#2E1E4D]/95' : 'bg-[#F1E7B5]/95'} backdrop-blur-sm border-b ${isDarkMode ? 'border-[#5B439A]/30' : 'border-[#2E1E4D]/20'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isDarkMode ? 'bg-[#2E1E4D]/95' : 'bg-[#5b439a]/15'} backdrop-blur-sm border-b ${isDarkMode ? 'border-[#5B439A]/30' : 'border-[#2E1E4D]/20'}`}>
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <nav className="flex items-center justify-between">
           <div className={`text-2xl font-bold tracking-wider ${isDarkMode ? 'text-[#F1E7B5]' : 'text-[#2E1E4D]'}`}>
