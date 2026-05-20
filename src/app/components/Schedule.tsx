@@ -193,10 +193,10 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               <button
                 key={dia}
                 onClick={() => setFiltroDia(filtroDia === dia ? null : dia)}
-                className={`text-xs px-3 py-1 rounded-full border transition-colors ${
+                className={`text-[16px] px-3 py-1 rounded-full border transition-colors ${
                   filtroDia === dia
                     ? dk ? 'bg-[#F1E7B5] text-[#2E1E4D]' : 'bg-[#2E1E4D] text-white'
-                    : dk ? 'border-[#5B439A]/40 text-[#F1E7B5]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
+                    : dk ? 'border-[#5B439A]/40 text-[#FFFFFF]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
                 }`}
               >
                 {dia}
@@ -210,10 +210,10 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               <button
                 key={tipo}
                 onClick={() => setFiltroTipo(filtroTipo === tipo ? null : tipo)}
-                className={`text-xs px-3 py-1 rounded-full border transition-colors ${
+                className={`text-[16px] px-3 py-1 rounded-full border transition-colors ${
                   filtroTipo === tipo
                     ? dk ? 'bg-[#F1E7B5] text-[#2E1E4D]' : 'bg-[#2E1E4D] text-white'
-                    : dk ? 'border-[#5B439A]/40 text-[#F1E7B5]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
+                    : dk ? 'border-[#5B439A]/40 text-[#FFFFFF]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
                 }`}
               >
                 {tipo === 'palestra' ? 'Palestras' : tipo === 'minicurso-trilha' ? 'Trilhas' : 'Minicursos'}
@@ -227,10 +227,10 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               <button
                 key={trilha}
                 onClick={() => setFiltroTrilha(filtroTrilha === trilha ? null : trilha)}
-                className={`text-xs font-mono px-3 py-1 rounded-full border transition-colors ${
+                className={`text-[16px] font-mono px-3 py-1 rounded-full border transition-colors ${
                   filtroTrilha === trilha
                     ? trilhaCores[trilha]
-                    : dk ? 'border-[#5B439A]/40 text-[#F1E7B5]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
+                    : dk ? 'border-[#5B439A]/40 text-[#FFFFFF]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
                 }`}
               >
                 {trilha}
