@@ -46,7 +46,7 @@ export function Footer({ isDarkMode, scrollToSection }: FooterProps) {
                 </button>
               </li>
               <li>
-                <a href="https://uesc.br" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-300 ${isDarkMode ? 'text-[#A1ADCF] hover:text-[#F1E7B5]' : 'text-[#5B439A] hover:text-[#2E1E4D]'}`}>
+                <a href="https://www.uesc.br" target="_blank" rel="noopener noreferrer" className={`transition-colors duration-300 ${isDarkMode ? 'text-[#A1ADCF] hover:text-[#F1E7B5]' : 'text-[#5B439A] hover:text-[#2E1E4D]'}`}>
                   UESC
                 </a>
               </li>
