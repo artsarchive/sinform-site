@@ -431,11 +431,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
                           >
                             <div className="flex flex-col justify-center py-2">
                               {event.tipo === "minicurso-trilha" && (
-                                <span
-                                  className={`text-xs font-bold tracking-wide px-3 py-1 rounded-full w-fit ${trilhaCores[event.trilha]}`}
-                                >
-                                  {event.trilha}
-                                </span>
+                                <>
+                                  {event.tipo === "minicurso-trilha" &&
+                                    event.trilha != "MINICURSO" && (
+                                      <span
+                                        className={`text-xs font-bold tracking-wide px-3 py-1 mb-2 rounded-full w-fit ${dk ? "bg-neutral-500/40 text-white" : "bg-neutral-900/60 text-white"}`}
+                                      >
+                                        TRILHA
+                                      </span>
+                                    )}
+                                  <span
+                                    className={`text-xs font-bold tracking-wide px-3 py-1 rounded-full w-fit ${trilhaCores[event.trilha]}`}
+                                  >
+                                    {event.trilha}
+                                  </span>
+                                </>
                               )}
                             </div>
 
