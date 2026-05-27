@@ -4,7 +4,6 @@ type Trilha = 'CIÊNCIA DE DADOS' | 'WEB + UI/UX' | 'BACKEND';
 
 interface EventoBase {
   title: string;
-  room: string;
 }
 
 interface MinicursoSimples extends EventoBase {
@@ -50,21 +49,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '09:00',
           endTime: '10:15',
           events: [
-            { tipo: 'palestra', title: 'Abertura SINFORM', speaker: 'Sílvio Commim', speakerDescription: 'DATEN', room: 'Biblioteca' },
+            { tipo: 'palestra', title: 'Abertura SINFORM', speaker: 'Sílvio Commim', speakerDescription: 'DATEN' },
           ],
         },
         {
           startTime: '10:45',
           endTime: '12:00',
           events: [
-            { tipo: 'palestra', title: 'Palestra 2', speaker: 'Leonardo Zanotto', speakerDescription: 'Líder do time de governança de dados da iFood', room: 'Sala 8B' },
+            { tipo: 'palestra', title: 'Palestra 2', speaker: 'Leonardo Zanotto', speakerDescription: 'Líder do time de governança de dados da iFood' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '17:00',
           events: [
-            { tipo: 'minicurso-simples', title: 'Mesa Redonda', speaker: 'O universo da tecnologia na era da IA', room: 'Sala 8B' },
+            { tipo: 'minicurso-simples', title: 'Mesa Redonda', speaker: 'O universo da tecnologia na era da IA' },
           ],
         },
       ],
@@ -76,22 +75,22 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Ciência de Dados e Machine Learning com Python', speaker: 'Ítalo Seara', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'UX Design aplicado: princípios essenciais para sistemas web e mobile', speaker: 'Isabelle Cruz', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'API REST na prática com Python: construindo e consumindo com Flask', speaker: 'Izabelle Garcez', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo', speaker: 'Joabe Andrade', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Conceitos básicos de programação e resolução de problemas usando C e Python', speaker: 'Humberto', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Pacotes Online e Canva', speaker: 'Maria Eduarda e Rebeca', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Ciência de Dados e Machine Learning com Python', speaker: 'Ítalo Seara' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'UX Design aplicado: princípios essenciais para sistemas web e mobile', speaker: 'Isabelle Cruz' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'API REST na prática com Python: construindo e consumindo com Flask', speaker: 'Izabelle Garcez' },
+            { tipo: 'minicurso-simples', title: 'Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo', speaker: 'Joabe Andrade' },
+            { tipo: 'minicurso-simples', title: 'Conceitos básicos de programação e resolução de problemas usando C e Python', speaker: 'Humberto' },
+            { tipo: 'minicurso-simples', title: 'Pacotes Online e Canva', speaker: 'Maria Eduarda e Rebeca' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '17:00',
           events: [
-            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Introdução a Ciência de Dados com Python', speaker: 'Solana Marina', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Segurança Web: Fundamentos, Vulnerabilidades e Exploração', speaker: 'Henrique Souza', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: '?', speaker: '?', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Introdução a Git e GitHub', speaker: 'João Pedro França', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Introdução a Ciência de Dados com Python', speaker: 'Solana Marina' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Segurança Web: Fundamentos, Vulnerabilidades e Exploração', speaker: 'Henrique Souza' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Introdução ao Deploy de APIs em Cloud', speaker: 'Wilson Silva' },
+            { tipo: 'minicurso-simples', title: 'Introdução a Git e GitHub', speaker: 'João Pedro França' },
           ],
         },
       ],
@@ -103,22 +102,22 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do dado bruto ao insight: Python + Power BI na prática', speaker: 'Brenda Castro', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Frontend do zero: criando sua primeira página web na prática', speaker: 'Davi Roriz', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Laravel na prática: criando e testando sua primeira API', speaker: 'André Cardoso', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Primeiros passos no teste de softwares', speaker: 'Thainá e Guilherme B.', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Introdução ao Tráfego Pago com Meta ADS: Como anunciar no Facebook e Instagram', speaker: 'Ryan', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do dado bruto ao insight: Python + Power BI na prática', speaker: 'Brenda Castro' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Frontend do zero: criando sua primeira página web na prática', speaker: 'Davi Roriz' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Laravel na prática: criando e testando sua primeira API', speaker: 'André Cardoso' },
+            { tipo: 'minicurso-simples', title: 'Primeiros passos no teste de softwares', speaker: 'Thainá e Guilherme B.' },
+            { tipo: 'minicurso-simples', title: 'Introdução ao Tráfego Pago com Meta ADS: Como anunciar no Facebook e Instagram', speaker: 'Ryan' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '17:00',
           events: [
-            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do Pixel ao Prompt: Imersão em IA e Prática em Visão Computacional', speaker: 'Henrique Daniel', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'FullStack com React, Node.js e TypeScript', speaker: 'Renardo Alves', room: 'Sala X' },
-            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Introdução à Programação Backend: Construindo APIs REST em .NET (Minimal API)', speaker: 'Vitor Pires', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Deep Learning para Detecção de Objetos em Vídeos utilizando YOLO', speaker: 'Claudio Goes', room: 'Sala X' },
-            { tipo: 'minicurso-simples', title: 'Edição e Restauração de Fotos com Photopea: da Introdução ao Uso Autônomo', speaker: 'Erick Silva', room: 'Sala X' },
+            { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do Pixel ao Prompt: Imersão em IA e Prática em Visão Computacional', speaker: 'Henrique Daniel' },
+            { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'FullStack com React, Node.js e TypeScript', speaker: 'Renardo Alves' },
+            { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Introdução à Programação Backend: Construindo APIs REST em .NET (Minimal API)', speaker: 'Vitor Pires' },
+            { tipo: 'minicurso-simples', title: 'Deep Learning para Detecção de Objetos em Vídeos utilizando YOLO', speaker: 'Claudio Goes' },
+            { tipo: 'minicurso-simples', title: 'Edição e Restauração de Fotos com Photopea: da Introdução ao Uso Autônomo', speaker: 'Erick Silva' },
           ],
         },
       ],
@@ -130,21 +129,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { tipo: 'minicurso-simples', title: 'Dominando o Terminal Linux: do Zero à Automação', speaker: 'Arthur de Carvalho', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Dominando o Terminal Linux: do Zero à Automação', speaker: 'Arthur de Carvalho' },
           ],
         },
         {
           startTime: '09:00',
           endTime: '11:00',
           events: [
-            { tipo: 'minicurso-simples', title: 'Aquecimento para CPU', speaker: 'Hamilton', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Aquecimento para CPU', speaker: 'Hamilton' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '18:00',
           events: [
-            { tipo: 'minicurso-simples', title: 'Início da CPU', speaker: 'Hamilton', room: 'Sala X' },
+            { tipo: 'minicurso-simples', title: 'Início da CPU', speaker: 'Hamilton' },
           ],
         },
       ],
@@ -314,11 +313,6 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
                               </p>
                             )}
 
-                            {event.room !== 'Sala y' && (
-                              <p className={`text-[13px] mt-1 ${dk ? 'text-[#A1ADCF]/80' : 'text-[#5B439A]/80'}`}>
-                                {event.room}
-                              </p>
-                            )}
                           </div>
                         ))}
                       </div>
