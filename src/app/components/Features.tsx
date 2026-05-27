@@ -20,7 +20,7 @@ export function Features({ isDarkMode }: FeaturesProps) {
           ].map((item, index) => (
             <div
               key={index}
-              className={`group p-8 rounded-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl ${isDarkMode ? 'bg-[#2E1E4D]/50 border-2 border-[#A1ADCF]/30 hover:border-[#B2CCF1]' : 'bg-white border-2 border-[#A1ADCF] hover:border-[#5B439A]'}`}
+              className={`group p-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${isDarkMode ? 'bg-[#2E1E4D]/50 border-2 border-[#A1ADCF]/30 hover:border-[#B2CCF1]' : 'bg-white border-2 border-[#A1ADCF] hover:border-[#5B439A]'}`}
             >
               <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 ${isDarkMode ? 'bg-[#5B439A]' : 'bg-[#5B439A]'}`}>
                 <item.icon className={`w-8 h-8 ${isDarkMode ? 'text-[#F1E7B5]' : 'text-[#F1E7B5]'}`} />

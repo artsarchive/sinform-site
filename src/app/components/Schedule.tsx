@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-type Trilha = 'CIÊNCIA DE DADOS' | 'WEB + UI/UX' | 'BACKEND';
+type Trilha = 'CIÊNCIA DE DADOS' | 'WEB + UI/UX' | 'BACKEND' | 'MINICURSO';
 
 interface EventoBase {
   title: string;
 }
 
-interface MinicursoSimples extends EventoBase {
+interface MinicursoSimples extends EventoBase { 
   tipo: 'minicurso-simples';
   speaker: string;
 }
@@ -49,7 +49,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '09:00',
           endTime: '10:15',
           events: [
-            { tipo: 'palestra', title: 'Abertura SINFORM', speaker: 'Sílvio Commim', speakerDescription: 'DATEN' },
+            { tipo: 'palestra', title: 'Palestra 1', speaker: 'Sílvio Commim', speakerDescription: 'DATEN' },
           ],
         },
         {
@@ -78,9 +78,9 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Ciência de Dados e Machine Learning com Python', speaker: 'Ítalo Seara' },
             { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'UX Design aplicado: princípios essenciais para sistemas web e mobile', speaker: 'Isabelle Cruz' },
             { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'API REST na prática com Python: construindo e consumindo com Flask', speaker: 'Izabelle Garcez' },
-            { tipo: 'minicurso-simples', title: 'Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo', speaker: 'Joabe Andrade' },
-            { tipo: 'minicurso-simples', title: 'Conceitos básicos de programação e resolução de problemas usando C e Python', speaker: 'Humberto' },
-            { tipo: 'minicurso-simples', title: 'Pacotes Online e Canva', speaker: 'Maria Eduarda e Rebeca' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo', speaker: 'Joabe Andrade' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Conceitos básicos de programação e resolução de problemas usando C e Python', speaker: 'Humberto' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Pacotes Online e Canva', speaker: 'Maria Eduarda e Rebeca' },
           ],
         },
         {
@@ -90,7 +90,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Introdução a Ciência de Dados com Python', speaker: 'Solana Marina' },
             { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Segurança Web: Fundamentos, Vulnerabilidades e Exploração', speaker: 'Henrique Souza' },
             { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Introdução ao Deploy de APIs em Cloud', speaker: 'Wilson Silva' },
-            { tipo: 'minicurso-simples', title: 'Introdução a Git e GitHub', speaker: 'João Pedro França' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Introdução a Git e GitHub', speaker: 'João Pedro França' },
           ],
         },
       ],
@@ -105,8 +105,8 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do dado bruto ao insight: Python + Power BI na prática', speaker: 'Brenda Castro' },
             { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'Frontend do zero: criando sua primeira página web na prática', speaker: 'Davi Roriz' },
             { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Laravel na prática: criando e testando sua primeira API', speaker: 'André Cardoso' },
-            { tipo: 'minicurso-simples', title: 'Primeiros passos no teste de softwares', speaker: 'Thainá e Guilherme B.' },
-            { tipo: 'minicurso-simples', title: 'Introdução ao Tráfego Pago com Meta ADS: Como anunciar no Facebook e Instagram', speaker: 'Ryan' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Primeiros passos no teste de softwares', speaker: 'Thainá e Guilherme B.' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Introdução ao Tráfego Pago com Meta ADS: Como anunciar no Facebook e Instagram', speaker: 'Ryan' },
           ],
         },
         {
@@ -116,8 +116,8 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             { tipo: 'minicurso-trilha', trilha: "CIÊNCIA DE DADOS", title: 'Do Pixel ao Prompt: Imersão em IA e Prática em Visão Computacional', speaker: 'Henrique Daniel' },
             { tipo: 'minicurso-trilha', trilha: "WEB + UI/UX", title: 'FullStack com React, Node.js e TypeScript', speaker: 'Renardo Alves' },
             { tipo: 'minicurso-trilha', trilha: "BACKEND", title: 'Introdução à Programação Backend: Construindo APIs REST em .NET (Minimal API)', speaker: 'Vitor Pires' },
-            { tipo: 'minicurso-simples', title: 'Deep Learning para Detecção de Objetos em Vídeos utilizando YOLO', speaker: 'Claudio Goes' },
-            { tipo: 'minicurso-simples', title: 'Edição e Restauração de Fotos com Photopea: da Introdução ao Uso Autônomo', speaker: 'Erick Silva' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Deep Learning para Detecção de Objetos em Vídeos utilizando YOLO', speaker: 'Claudio Goes' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Edição e Restauração de Fotos com Photopea: da Introdução ao Uso Autônomo', speaker: 'Erick Silva' },
           ],
         },
       ],
@@ -129,21 +129,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           startTime: '08:00',
           endTime: '12:00',
           events: [
-            { tipo: 'minicurso-simples', title: 'Dominando o Terminal Linux: do Zero à Automação', speaker: 'Arthur de Carvalho' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Dominando o Terminal Linux: do Zero à Automação', speaker: 'Arthur de Carvalho' },
           ],
         },
         {
           startTime: '09:00',
           endTime: '11:00',
           events: [
-            { tipo: 'minicurso-simples', title: 'Aquecimento para CPU', speaker: 'Hamilton' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Aquecimento para CPU', speaker: 'Hamilton' },
           ],
         },
         {
           startTime: '14:00',
           endTime: '18:00',
           events: [
-            { tipo: 'minicurso-simples', title: 'Início da CPU', speaker: 'Hamilton' },
+            { tipo: 'minicurso-trilha', trilha: 'MINICURSO', title: 'Início da CPU', speaker: 'Hamilton' },
           ],
         },
       ],
@@ -156,25 +156,13 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
     'CIÊNCIA DE DADOS': dk ? 'bg-sky-900/60 text-sky-200' : 'bg-sky-100 text-sky-700',
     'WEB + UI/UX': dk ? 'bg-violet-900/60 text-violet-200' : 'bg-violet-100 text-violet-700',
     'BACKEND': dk ? 'bg-emerald-900/60 text-emerald-200' : 'bg-emerald-100 text-emerald-700',
+    'MINICURSO': dk ? 'bg-red-900/60 text-red-200' : 'bg-red-100 text-red-700',
   };
 
   const [filtroDia, setFiltroDia] = useState<string | null>(null);
-  const [filtroTipo, setFiltroTipo] = useState<string | null>(null);
-  const [filtroTrilha, setFiltroTrilha] = useState<Trilha | null>(null);
 
   const dadosFiltrados = scheduleData
-    .filter(day => !filtroDia || day.day === filtroDia)
-    .map(day => ({
-      ...day,
-      timeSlots: day.timeSlots.map(slot => ({
-        ...slot,
-        events: slot.events.filter(event => {
-          if (filtroTipo && event.tipo !== filtroTipo) return false;
-          if (filtroTrilha && (event.tipo !== 'minicurso-trilha' || event.trilha !== filtroTrilha)) return false;
-          return true;
-        }),
-      })),
-    }));
+    .filter(day => !filtroDia || day.day === filtroDia);
 
   return (
     <section id="programacao" className="py-20 px-4 sm:px-6">
@@ -199,40 +187,6 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
                 }`}
               >
                 {dia}
-              </button>
-            ))}
-          </div>
-
-          {/* por tipo */}
-          <div className="flex gap-2 flex-wrap justify-center">
-            {(['palestra', 'minicurso-trilha', 'minicurso-simples'] as const).map(tipo => (
-              <button
-                key={tipo}
-                onClick={() => setFiltroTipo(filtroTipo === tipo ? null : tipo)}
-                className={`text-[16px] px-3 py-1 rounded-full border transition-colors ${
-                  filtroTipo === tipo
-                    ? dk ? 'bg-[#F1E7B5] text-[#2E1E4D]' : 'bg-[#2E1E4D] text-white'
-                    : dk ? 'border-[#5B439A]/40 text-[#FFFFFF]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
-                }`}
-              >
-                {tipo === 'palestra' ? 'Palestras' : tipo === 'minicurso-trilha' ? 'Trilhas' : 'Minicursos'}
-              </button>
-            ))}
-          </div>
-
-          {/* por trilha */}
-          <div className="flex gap-2 flex-wrap justify-center">
-            {(['CIÊNCIA DE DADOS', 'WEB + UI/UX', 'BACKEND'] as Trilha[]).map(trilha => (
-              <button
-                key={trilha}
-                onClick={() => setFiltroTrilha(filtroTrilha === trilha ? null : trilha)}
-                className={`text-[16px] font-mono px-3 py-1 rounded-full border transition-colors ${
-                  filtroTrilha === trilha
-                    ? trilhaCores[trilha]
-                    : dk ? 'border-[#5B439A]/40 text-[#FFFFFF]/60 hover:border-[#F1E7B5]/40' : 'border-[#A1ADCF] text-[#5B439A] hover:border-[#2E1E4D]'
-                }`}
-              >
-                {trilha}
               </button>
             ))}
           </div>
