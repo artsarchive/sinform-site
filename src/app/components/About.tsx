@@ -14,7 +14,7 @@ export function About({ isDarkMode }: AboutProps) {
 
         <div className={`max-w-3xl mx-auto text-center mb-16 ${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#2E1E4D]'} text-lg leading-relaxed`}>
           <p>
-            O SINFORM é a Semana de Informática da UESC, um evento criado para reunir estudantes, professores e profissionais em torno do conhecimento tecnológico. Nosso objetivo é fomentar a troca de experiências, apresentar tendências da área e inspirar a próxima geração de profissionais de tecnologia.
+            O SINFORM é a Semana de Informática da UESC, um evento criado para reunir estudantes, professores e profissionais em torno do conhecimento tecnológico. O objetivo é fomentar a troca de experiências, apresentar tendências da área e inspirar a próxima geração de profissionais de tecnologia.
           </p>
         </div>
 

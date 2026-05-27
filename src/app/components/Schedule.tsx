@@ -43,7 +43,7 @@ interface ScheduleProps {
 export function Schedule({ isDarkMode }: ScheduleProps) {
   const scheduleData: DaySchedule[] = [
     {
-      day: "Dia 9",
+      day: "Dia 09/06",
       timeSlots: [
         {
           startTime: "09:00",
@@ -84,7 +84,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
       ],
     },
     {
-      day: "Dia 10",
+      day: "Dia 10/06",
       timeSlots: [
         {
           startTime: "08:00",
@@ -93,7 +93,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
-              title: "Ciência de Dados e Machine Learning com Python",
+              title: "Ciência de dados e machine learning com Python",
               speaker: "Ítalo Seara",
             },
             {
@@ -114,7 +114,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo",
+                "Estratégias de inserção no mercado de trabalho: LinkedIn e Currículo",
               speaker: "Joabe Andrade",
             },
             {
@@ -127,7 +127,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
-              title: "Pacotes Online e Canva",
+              title: "Pacotes online e Canva",
               speaker: "Maria Eduarda e Rebeca",
             },
           ],
@@ -139,20 +139,20 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
-              title: "Introdução a Ciência de Dados com Python",
+              title: "Introdução a ciência de dados com Python",
               speaker: "Solana Marina",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "WEB + UI/UX",
               title:
-                "Segurança Web: Fundamentos, Vulnerabilidades e Exploração",
+                "Segurança web: Fundamentos, vulnerabilidades e exploração",
               speaker: "Henrique Souza",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "BACKEND",
-              title: "Introdução ao Deploy de APIs em Cloud",
+              title: "Introdução ao deploy de APIs em Cloud",
               speaker: "Wilson Silva",
             },
             {
@@ -166,7 +166,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
       ],
     },
     {
-      day: "Dia 11",
+      day: "Dia 11/06",
       timeSlots: [
         {
           startTime: "08:00",
@@ -201,7 +201,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Introdução ao Tráfego Pago com Meta ADS: Como anunciar no Facebook e Instagram",
+                "Introdução ao tráfego pago com Meta ADS: Como anunciar no Facebook e Instagram",
               speaker: "Ryan",
             },
           ],
@@ -214,7 +214,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
               title:
-                "Do Pixel ao Prompt: Imersão em IA e Prática em Visão Computacional",
+                "Do Pixel ao Prompt: Imersão em IA e prática em visão computacional",
               speaker: "Henrique Daniel",
             },
             {
@@ -227,21 +227,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               tipo: "minicurso-trilha",
               trilha: "BACKEND",
               title:
-                "Introdução à Programação Backend: Construindo APIs REST em .NET (Minimal API)",
+                "Introdução à programação backend: Construindo APIs REST em .NET (Minimal API)",
               speaker: "Vitor Pires",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Deep Learning para Detecção de Objetos em Vídeos utilizando YOLO",
+                "Deep Learning para detecção de objetos em vídeos utilizando YOLO",
               speaker: "Claudio Goes",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Edição e Restauração de Fotos com Photopea: da Introdução ao Uso Autônomo",
+                "Edição e restauração de fotos com photopea: da introdução ao uso autônomo",
               speaker: "Erick Silva",
             },
           ],
@@ -249,7 +249,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
       ],
     },
     {
-      day: "Dia 12",
+      day: "Dia 12/06",
       timeSlots: [
         {
           startTime: "08:00",
@@ -258,7 +258,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
-              title: "Dominando o Terminal Linux: do Zero à Automação",
+              title: "Dominando o terminal Linux: do zero à automação",
               speaker: "Arthur de Carvalho",
             },
           ],
@@ -342,7 +342,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             </button>
 
             {/* Botões dos Dias */}
-            {["Dia 9", "Dia 10", "Dia 11", "Dia 12"].map((dia) => (
+            {["Dia 09/06", "Dia 10/06", "Dia 11/06", "Dia 12/06"].map((dia) => (
               <button
                 key={dia}
                 onClick={() => setFiltroDia(filtroDia === dia ? null : dia)}
