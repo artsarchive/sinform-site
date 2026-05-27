@@ -268,10 +268,10 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           endTime: "11:00",
           events: [
             {
-              tipo: "minicurso-trilha",
-              trilha: "MINICURSO",
-              title: "Aquecimento para CPU",
+              tipo: "palestra",
+              title: "Aquecimento para Campeonato de Programação Universitário (CPU)",
               speaker: "Hamilton",
+              speakerDescription: ""
             },
           ],
         },
@@ -280,10 +280,10 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           endTime: "18:00",
           events: [
             {
-              tipo: "minicurso-trilha",
-              trilha: "MINICURSO",
-              title: "Início da CPU",
+              tipo: "palestra",
+              title: "Início da Campeonato de Programação Universitário (CPU)",
               speaker: "Hamilton",
+              speakerDescription: ""
             },
           ],
         },
@@ -409,12 +409,12 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
                         }`}
                       >
                         <span
-                          className={`text-xs font-semibold tabular-nums ${dk ? "text-[#F1E7B5]" : "text-[#2E1E4D]"}`}
+                          className={`text-[16px] font-semibold tabular-nums ${dk ? "text-[#F1E7B5]" : "text-[#2E1E4D]"}`}
                         >
                           {slot.startTime}
                         </span>
                         <span
-                          className={`text-[10px] mt-0.5 tabular-nums ${dk ? "text-[#A1ADCF]/50" : "text-[#5B439A]/50"}`}
+                          className={`text-[14px] mt-0.5 tabular-nums ${dk ? "text-[#A1ADCF]/50" : "text-[#5B439A]/50"}`}
                         >
                           {slot.endTime}
                         </span>
