@@ -93,7 +93,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
-              title: "Ciência de Dados e Machine Learning com Python",
+              title: "Ciência de Dados com Python: Manipulação, estatística e visualização de dados",
               speaker: "Ítalo Seara",
             },
             {
@@ -139,7 +139,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
-              title: "Introdução a Ciência de Dados com Python",
+              title: "Introdução a Machine Learning com Python: Modelos preditivos para ciência de dados",
               speaker: "Solana Marina",
             },
             {
