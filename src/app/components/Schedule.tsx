@@ -93,41 +93,41 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
-              title: "Ciência de dados e machine learning com Python",
+              title: "Ciência de Dados e Machine Learning com Python",
               speaker: "Ítalo Seara",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "WEB + UI/UX",
               title:
-                "UX Design aplicado: princípios essenciais para sistemas web e mobile",
+                "UX Design Aplicado: Princípios essenciais para sistemas web e mobile",
               speaker: "Isabelle Cruz",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "BACKEND",
               title:
-                "API REST na prática com Python: construindo e consumindo com Flask",
+                "API REST na Prática com Python: Construindo e consumindo com Flask",
               speaker: "Izabelle Garcez",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Estratégias de inserção no mercado de trabalho: LinkedIn e Currículo",
+                "Estratégias de Inserção no Mercado de Trabalho: LinkedIn e Currículo",
               speaker: "Joabe Andrade",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Conceitos básicos de programação e resolução de problemas usando C e Python",
+                "Conceitos Básicos de Programação e Resolução de Problemas Usando C e Python",
               speaker: "Humberto",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
-              title: "Pacotes online e Canva",
+              title: "Pacotes Online e Canva",
               speaker: "Maria Eduarda e Rebeca",
             },
           ],
@@ -139,20 +139,20 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
-              title: "Introdução a ciência de dados com Python",
+              title: "Introdução a Ciência de Dados com Python",
               speaker: "Solana Marina",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "WEB + UI/UX",
               title:
-                "Segurança web: Fundamentos, vulnerabilidades e exploração",
+                "Segurança Web: Fundamentos, vulnerabilidades e exploração",
               speaker: "Henrique Souza",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "BACKEND",
-              title: "Introdução ao deploy de APIs em Cloud",
+              title: "Introdução ao Deploy de APIs em Cloud",
               speaker: "Wilson Silva",
             },
             {
@@ -175,33 +175,33 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "CIÊNCIA DE DADOS",
-              title: "Do dado bruto ao insight: Python + Power BI na prática",
+              title: "Do Dado Bruto ao Insight: Python + Power BI na prática",
               speaker: "Brenda Castro",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "WEB + UI/UX",
               title:
-                "Frontend do zero: criando sua primeira página web na prática",
+                "Frontend do Zero: Criando sua primeira página web na prática",
               speaker: "Davi Roriz",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "BACKEND",
-              title: "Laravel na prática: criando e testando sua primeira API",
+              title: "Laravel na Prática: Criando e testando sua primeira API",
               speaker: "André Cardoso",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
-              title: "Primeiros passos no teste de softwares",
+              title: "Primeiros Passos no Teste de Softwares",
               speaker: "Thainá e Guilherme B.",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Introdução ao tráfego pago com Meta ADS: Como anunciar no Facebook e Instagram",
+                "Introdução ao Tráfego Pago com Meta ADS: Como anunciar no Facebook e Instagram",
               speaker: "Ryan",
             },
           ],
@@ -227,21 +227,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               tipo: "minicurso-trilha",
               trilha: "BACKEND",
               title:
-                "Introdução à programação backend: Construindo APIs REST em .NET (Minimal API)",
+                "Introdução à Programação Backend: Construindo APIs REST em .NET (Minimal API)",
               speaker: "Vitor Pires",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Deep Learning para detecção de objetos em vídeos utilizando YOLO",
+                "Deep Learning para Detecção de Objetos em Vídeos Utilizando YOLO",
               speaker: "Claudio Goes",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
-                "Edição e restauração de fotos com photopea: da introdução ao uso autônomo",
+                "Edição e Restauração de Fotos com Photopea: Da introdução ao uso autônomo",
               speaker: "Erick Silva",
             },
           ],
@@ -258,7 +258,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
-              title: "Dominando o terminal Linux: do zero à automação",
+              title: "Dominando o Terminal Linux: Do zero à automação",
               speaker: "Arthur de Carvalho",
             },
           ],
