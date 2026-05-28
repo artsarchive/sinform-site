@@ -269,7 +269,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           events: [
             {
               tipo: "palestra",
-              title: "Aquecimento para Campeonato de Programação Universitário (CPU)",
+              title: "Aquecimento para o Campeonato de Programação Universitário (CPU)",
               speaker: "Hamilton",
               speakerDescription: ""
             },
@@ -281,7 +281,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
           events: [
             {
               tipo: "palestra",
-              title: "Início da Campeonato de Programação Universitário (CPU)",
+              title: "Início do Campeonato de Programação Universitário (CPU)",
               speaker: "Hamilton",
               speakerDescription: ""
             },
