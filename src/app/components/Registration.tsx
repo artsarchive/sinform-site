@@ -10,7 +10,7 @@ export function Registration({ isDarkMode }: RegistrationProps) {
           Não Perca a Oportunidade!
         </h2>
         <p className={`text-xl mb-8 ${isDarkMode ? 'text-[#A1ADCF]' : 'text-[#5B439A]'}`}>
-          Garanta sua vaga nos minicursos mais concorridos!
+          Garanta sua vaga nos minicursos mais concorridos.
         </p>
         <button
           className={`px-12 py-5 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 ${isDarkMode ? 'bg-[#5B439A] text-[#F1E7B5] hover:bg-[#B2CCF1] hover:text-[#2E1E4D]' : 'bg-[#5B439A] text-[#F1E7B5] hover:bg-[#2E1E4D]'} shadow-2xl`}
