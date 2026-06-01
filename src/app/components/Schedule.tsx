@@ -122,13 +122,13 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               trilha: "MINICURSO",
               title:
                 "Conceitos básicos de programação e resolução de problemas usando C e Python",
-              speaker: "Humberto",
+              speaker: "Emanuel Humberto Menezes",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title: "Pacotes online e Canva",
-              speaker: "Maria Eduarda e Rebeca",
+              speaker: "Maria Eduarda Del Rei e Rebeca Santana dos Santos",
             },
           ],
         },
@@ -195,14 +195,21 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title: "Primeiros passos no teste de softwares",
-              speaker: "Thainá e Guilherme B.",
+              speaker: "Thainá Guimarães e Guilherme Afonso Bongestab",
             },
             {
               tipo: "minicurso-trilha",
               trilha: "MINICURSO",
               title:
                 "Introdução ao tráfego pago com Meta ADS: Como anunciar no Facebook e Instagram",
-              speaker: "Ryan",
+              speaker: "Ryan Ribeiro",
+            },
+            {
+              tipo: "minicurso-trilha",
+              trilha: "MINICURSO",
+              title:
+                "Edição e restauração de fotos com photopea: da introdução ao uso autônomo",
+              speaker: "Erick Silva",
             },
           ],
         },
@@ -237,13 +244,6 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
                 "Deep Learning para detecção de objetos em vídeos utilizando YOLO",
               speaker: "Claudio Goes",
             },
-            {
-              tipo: "minicurso-trilha",
-              trilha: "MINICURSO",
-              title:
-                "Edição e restauração de fotos com photopea: da introdução ao uso autônomo",
-              speaker: "Erick Silva",
-            },
           ],
         },
       ],
@@ -270,7 +270,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "palestra",
               title: "Aquecimento para Campeonato de Programação Universitário (CPU)",
-              speaker: "Hamilton",
+              speaker: "Hamilton Brumatto",
               speakerDescription: ""
             },
           ],
@@ -282,7 +282,7 @@ export function Schedule({ isDarkMode }: ScheduleProps) {
             {
               tipo: "palestra",
               title: "Início da Campeonato de Programação Universitário (CPU)",
-              speaker: "Hamilton",
+              speaker: "Hamilton Brumatto",
               speakerDescription: ""
             },
           ],
